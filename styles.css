@@ -388,6 +388,13 @@ footer p {
   max-width: none;
 }
 
+.micro-trust {
+  margin-top: 16px;
+
+  font-size: 0.92rem;
+
+  color: rgba(4, 50, 56, 0.72);
+}
 /* =========================
    MOBILE
 ========================= */
