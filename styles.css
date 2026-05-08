@@ -1,30 +1,46 @@
-/* RESET */
+/* =========================
+   BASE RESET
+========================= */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* BASE */
 body {
   font-family: Arial, sans-serif;
   line-height: 1.6;
-  color: #222;
-  background: #fff;
+  color: #1b1f24;
+  background: #ffffff;
 }
 
-/* CONTAINER */
+/* =========================
+   COLOR SYSTEM (THEME)
+========================= */
+:root {
+  --primary: #1e5aa8;      /* deep water blue */
+  --secondary: #4fb6e8;    /* soft aqua */
+  --light: #f4fbff;        /* very light blue background */
+  --text: #1b1f24;
+  --muted: #5a6b7a;
+}
+
+/* =========================
+   LAYOUT
+========================= */
 .container {
   width: 90%;
   max-width: 1000px;
   margin: 0 auto;
 }
 
-/* HEADER */
+/* =========================
+   HEADER / NAV
+========================= */
 header {
-  background: #111;
+  background: var(--primary);
   color: white;
-  padding: 18px 0;
+  padding: 16px 0;
 }
 
 header .container {
@@ -33,136 +49,178 @@ header .container {
   align-items: center;
 }
 
-/* LOGO */
 .logo {
   color: white;
   text-decoration: none;
-  font-size: 1.3rem;
-  font-weight: bold;
+  font-size: 1.25rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
 }
 
-/* NAV */
 nav {
   display: flex;
   gap: 18px;
 }
 
 nav a {
-  color: white;
+  color: rgba(255,255,255,0.9);
   text-decoration: none;
   font-weight: 500;
+  transition: 0.2s;
 }
 
 nav a:hover {
-  color: #00aaff;
+  color: white;
 }
 
-/* HERO */
+/* =========================
+   HERO
+========================= */
 .hero {
+  background: linear-gradient(
+    135deg,
+    var(--light),
+    #ffffff
+  );
   padding: 90px 0;
   text-align: center;
-  background: #f5f5f5;
 }
 
 .hero h1 {
-  font-size: 2.5rem;
-  margin-bottom: 15px;
+  font-size: 2.6rem;
+  margin-bottom: 12px;
+  color: var(--primary);
 }
 
 .hero p {
   max-width: 600px;
   margin: 0 auto 25px;
+  color: var(--muted);
 }
 
-/* PAGE HEADER (ABOUT PAGE TOP) */
-.page-header {
-  padding: 70px 0;
-  text-align: center;
-  background: #f5f5f5;
-}
-
-.page-header h1 {
-  font-size: 2.3rem;
-  margin-bottom: 10px;
-}
-
-/* BUTTON */
+/* =========================
+   BUTTONS
+========================= */
 .button {
   display: inline-block;
-  background: #00aaff;
+  background: var(--secondary);
   color: white;
-  padding: 12px 22px;
+  padding: 12px 24px;
+  border-radius: 999px;
   text-decoration: none;
-  border-radius: 5px;
-  font-weight: bold;
+  font-weight: 600;
+  transition: 0.2s;
+  box-shadow: 0 6px 18px rgba(79, 182, 232, 0.25);
 }
 
 .button:hover {
-  background: #008ecc;
+  transform: translateY(-2px);
+  background: #3aa6da;
 }
 
-/* SECTIONS */
+/* =========================
+   SECTIONS
+========================= */
 section {
-  padding: 60px 0;
+  padding: 70px 0;
 }
 
-/* SERVICES */
+.services,
+.about,
+.contact {
+  background: white;
+}
+
 .services h2,
 .about h2,
 .contact h2 {
   text-align: center;
+  font-size: 1.9rem;
   margin-bottom: 30px;
-  font-size: 1.8rem;
+  color: var(--primary);
 }
 
-/* GRID */
+/* =========================
+   SERVICE CARDS
+========================= */
 .service-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 22px;
 }
 
-/* CARDS */
 .card {
-  background: #fff;
-  border: 1px solid #eee;
-  padding: 20px;
-  border-radius: 8px;
+  background: var(--light);
+  border-radius: 14px;
+  padding: 22px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.06);
+  border: 1px solid rgba(30, 90, 168, 0.08);
+  transition: 0.2s;
 }
 
-/* ABOUT */
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 14px 30px rgba(0,0,0,0.08);
+}
+
+.card h3 {
+  color: var(--primary);
+  margin-bottom: 10px;
+  font-size: 1.1rem;
+}
+
+.card p {
+  color: var(--muted);
+}
+
+/* =========================
+   ABOUT SECTION
+========================= */
 .about p {
-  margin-bottom: 15px;
+  max-width: 700px;
+  margin: 0 auto 14px;
+  color: var(--muted);
+  text-align: center;
 }
 
 .about ul {
-  margin-top: 10px;
+  max-width: 400px;
+  margin: 20px auto 0;
   padding-left: 20px;
+  color: var(--text);
 }
 
 .about li {
   margin-bottom: 8px;
 }
 
-/* CONTACT */
+/* =========================
+   CONTACT
+========================= */
 .contact {
   text-align: center;
+  background: var(--light);
 }
 
 .contact p {
-  margin-bottom: 15px;
+  margin-bottom: 12px;
+  color: var(--muted);
 }
 
-/* FOOTER */
+/* =========================
+   FOOTER
+========================= */
 footer {
-  background: #111;
+  background: var(--primary);
   color: white;
   text-align: center;
-  padding: 20px 0;
+  padding: 18px 0;
   margin-top: 40px;
 }
 
-/* MOBILE */
+/* =========================
+   MOBILE
+========================= */
 @media (max-width: 768px) {
 
   header .container {
