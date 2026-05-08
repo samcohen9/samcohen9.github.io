@@ -1,7 +1,4 @@
-/* =========================
-   FARGO FRESH â€” WARM NATURAL FLOW
-   (TYPOGRAPHY-FIRST REDESIGN)
-========================= */
+/* FARGO FRESH */
 
 :root {
   --sky: rgb(160, 236, 248);
@@ -22,31 +19,24 @@
   box-sizing: border-box;
 }
 
-/* =========================
-   BASE (THIS IS WHERE THE â€œFEELâ€ CHANGES)
-========================= */
+/* BASE */
 body {
   font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
   background: var(--bg);
   color: var(--text);
 
-  /* softer reading experience */
+ 
   line-height: 1.85;
   font-size: 16.5px;
 }
 
-/* =========================
-   TYPOGRAPHY SYSTEM (less rigid hierarchy)
-========================= */
-
-/* headings are lighter, less â€œstampedâ€ */
+/* TYPOGRAPHY SYSTEM*/
 h1, h2, h3 {
   color: var(--deep);
   font-weight: 650;
   letter-spacing: 0.1px;
 }
 
-/* softer scaling (important change) */
 h1 {
   font-size: clamp(2rem, 4vw, 2.6rem);
   line-height: 1.2;
@@ -66,30 +56,26 @@ h3 {
   font-weight: 600;
 }
 
-/* paragraphs now feel more â€œwrittenâ€, less UI */
+
 p {
   color: var(--muted);
   margin-bottom: 14px;
-  max-width: 68ch; /* HUGE: stops wide-screen â€œtemplate feelâ€ */
+  max-width: 68ch; 
 }
 
-/* =========================
-   LAYOUT (LESS GRID FEEL)
-========================= */
+/* LAYOUT  */
 .container {
   width: 92%;
   max-width: 980px;
   margin: 0 auto;
 }
 
-/* slightly uneven rhythm (intentional) */
+
 section {
   padding: 88px 0;
 }
 
-/* =========================
-   HEADER (simple, grounded)
-========================= */
+/* HEADER */
 header {
   background: var(--deep);
   color: white;
@@ -120,15 +106,12 @@ nav a {
   font-size: 0.95rem;
 }
 
-/* =========================
-   HERO (NOW FEELS LIKE A HERO, NOT A BLOCK)
-========================= */
+/* HERO */
 .hero {
   padding: 110px 0 90px;
   background: linear-gradient(180deg, var(--sky), #ffffff 90%);
 }
 
-/* hero text alignment becomes more natural */
 .hero .container {
   text-align: left;
 }
@@ -142,16 +125,13 @@ nav a {
   margin-bottom: 10px;
 }
 
-/* second line feels like supporting voice, not UI subtext */
 .subtext {
   font-size: 0.95rem;
   color: var(--muted);
   margin-bottom: 22px;
 }
 
-/* =========================
-   BUTTON (less â€œUI buttonâ€, more friendly action)
-========================= */
+/* BUTTON  */
 .button {
   display: inline-block;
   background: var(--aqua);
@@ -172,23 +152,20 @@ section h2 {
   margin-bottom: 10px;
 }
 
-/* intro text now behaves like editorial subheading */
+
 .section-intro {
   max-width: 70ch;
   margin-bottom: 28px;
   text-align: left;
 }
 
-/* =========================
-   SERVICES (LESS â€œGRID TEMPLATEâ€ FEEL)
-========================= */
+/* SERVICES */
 .service-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   gap: 18px;
 }
 
-/* cards now feel like â€œnotesâ€, not UI blocks */
 .card {
   background: white;
   padding: 22px;
@@ -199,15 +176,13 @@ section h2 {
   box-shadow: 0 6px 14px rgba(0,0,0,0.04);
 }
 
-/* =========================
-   ABOUT (NOW FEELS WRITTEN, NOT BUILT)
-========================= */
+/*  ABOUT */
 .about p {
   text-align: left;
   max-width: 72ch;
 }
 
-/* about blocks softened further */
+
 .about-grid {
   display: grid;
   grid-template-columns: 1fr;
@@ -223,9 +198,7 @@ section h2 {
   border: 1px solid rgba(0, 177, 210, 0.08);
 }
 
-/* =========================
-   CONTACT (soft, calm CTA zone)
-========================= */
+/* CONTACT  */
 .contact {
   background: linear-gradient(180deg, var(--sky), #f6fcfd);
 }
@@ -240,9 +213,7 @@ section h2 {
   margin-top: 6px;
 }
 
-/* =========================
-   FOOTER
-========================= */
+/*  FOOTER */
 footer {
   background: var(--deep);
   color: white;
@@ -250,9 +221,7 @@ footer {
   padding: 22px 0;
 }
 
-/* =========================
-   MOBILE (keeps flow, not layout rigidity)
-========================= */
+/* MOBILE */
 @media (max-width: 768px) {
 
   header .container {
